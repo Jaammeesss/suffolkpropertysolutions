@@ -1,0 +1,38 @@
+# Suffolk Property Solutions
+
+# Use index.php as default document
+DirectoryIndex index.php
+
+# Disable directory listing
+Options -Indexes
+
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Remove .php from URLs — redirect browser GET/HEAD requests for .php files to clean URLs
+# Does not affect POST (contact form handler)
+RewriteCond %{REQUEST_METHOD} =GET [OR]
+RewriteCond %{REQUEST_METHOD} =HEAD
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([a-zA-Z0-9_/-]+)\.php [NC]
+RewriteRule ^([a-zA-Z0-9_/\-]+)\.php$ /$1 [R=301,L]
+
+# Serve .php files for clean URLs (top-level and subdirectories e.g. /services/handyman)
+# Use .php -f condition so /services rewrites to services.php even though a services/ directory exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([a-zA-Z0-9_/\-]+)/?$ $1.php [L]
+
+# Protect hidden and sensitive files
+<FilesMatch "^(\.env|\.git|\.htaccess|composer\.(json|lock))$">
+  Require all denied
+</FilesMatch>
+
+# Basic hardening headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

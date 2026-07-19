@@ -1,0 +1,873 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lorem Ipsum</title>
+    <style>
+      :root {
+        --bg: #f7f4ef;
+        --card: #ffffff;
+        --ink: #1d1c19;
+        --muted: #6f6a62;
+        --brand: #e46b2e;
+        --brand-dark: #9f3e16;
+        --green: #233c2c;
+        --line: rgba(29, 28, 25, 0.12);
+        --shadow: 0 20px 60px rgba(49, 42, 31, 0.14);
+        --radius: 28px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.55;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img,
+      svg {
+        max-width: 100%;
+      }
+
+      .page {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .page::before {
+        content: "";
+        position: fixed;
+        inset: -20% -10% auto auto;
+        width: 520px;
+        height: 520px;
+        background: radial-gradient(
+          circle,
+          rgba(228, 107, 46, 0.22),
+          transparent 68%
+        );
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .container {
+        width: min(1140px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero > *,
+      .banner > *,
+      .section-head > *,
+      .quote > * {
+        min-width: 0;
+      }
+
+      header {
+        padding: 24px 0;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        background: rgba(255, 255, 255, 0.74);
+        border: 1px solid var(--line);
+        backdrop-filter: blur(14px);
+        border-radius: 999px;
+        padding: 12px 16px 12px 18px;
+        box-shadow: 0 10px 35px rgba(31, 25, 15, 0.06);
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        min-width: 0;
+        white-space: nowrap;
+      }
+
+      .logo-mark {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        background: var(--green);
+        color: #fff;
+        box-shadow: inset 0 -8px 16px rgba(0, 0, 0, 0.18);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 22px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 0;
+        border-radius: 999px;
+        padding: 14px 20px;
+        font-weight: 800;
+        cursor: pointer;
+        min-height: 48px;
+        text-align: center;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        color: #fff;
+        box-shadow: 0 14px 30px rgba(228, 107, 46, 0.35);
+      }
+
+      .btn-secondary {
+        background: #fff;
+        color: var(--ink);
+        border: 1px solid var(--line);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 56px;
+        align-items: center;
+        padding: 64px 0 46px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--brand-dark);
+        background: rgba(228, 107, 46, 0.12);
+        border: 1px solid rgba(228, 107, 46, 0.24);
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-weight: 800;
+        font-size: 0.86rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin: 22px 0 18px;
+        font-size: clamp(3rem, 8vw, 6.3rem);
+        line-height: 0.91;
+        letter-spacing: -0.075em;
+      }
+
+      h1 span {
+        color: var(--brand);
+      }
+
+      .hero p {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 1.15rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 30px;
+      }
+
+      .trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin-top: 34px;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .trust-row span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-card {
+        position: relative;
+        min-height: 560px;
+        border-radius: 44px;
+        background:
+          linear-gradient(
+            145deg,
+            rgba(35, 60, 44, 0.92),
+            rgba(35, 60, 44, 0.78)
+          ),
+          radial-gradient(
+            circle at 40% 20%,
+            rgba(255, 255, 255, 0.25),
+            transparent 32%
+          );
+        box-shadow: var(--shadow);
+        padding: 28px;
+        overflow: hidden;
+      }
+
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 34px;
+      }
+
+      .tool-illustration {
+        position: absolute;
+        inset: 90px 40px 80px;
+        display: grid;
+        place-items: center;
+        font-size: 9rem;
+        transform: rotate(-8deg);
+        filter: drop-shadow(0 30px 35px rgba(0, 0, 0, 0.28));
+      }
+
+      .job-card,
+      .rating-card {
+        position: absolute;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        color: var(--ink);
+        border-radius: 24px;
+        padding: 18px;
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+      }
+
+      .job-card {
+        left: 26px;
+        bottom: 28px;
+        width: 230px;
+      }
+
+      .rating-card {
+        right: 26px;
+        top: 32px;
+        width: 190px;
+      }
+
+      .job-card strong,
+      .rating-card strong {
+        display: block;
+        font-size: 1.5rem;
+        letter-spacing: -0.04em;
+      }
+
+      .job-card small,
+      .rating-card small {
+        color: var(--muted);
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 28px;
+        margin-bottom: 28px;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        line-height: 0.98;
+        letter-spacing: -0.06em;
+        margin-bottom: 0;
+      }
+
+      .section-head p {
+        max-width: 440px;
+        color: var(--muted);
+        margin-bottom: 0;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .service-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: 0 12px 36px rgba(31, 25, 15, 0.05);
+        min-height: 230px;
+      }
+
+      .service-card .icon {
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        border-radius: 18px;
+        background: rgba(228, 107, 46, 0.12);
+        font-size: 1.6rem;
+        margin-bottom: 28px;
+      }
+
+      h3 {
+        letter-spacing: -0.035em;
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+      }
+
+      .service-card p,
+      .process-card p,
+      .testimonial p {
+        color: var(--muted);
+        margin-bottom: 0;
+      }
+
+      .banner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: stretch;
+        background: var(--green);
+        color: #fff;
+        border-radius: 42px;
+        padding: 26px;
+        box-shadow: var(--shadow);
+      }
+
+      .banner-copy {
+        padding: 28px;
+      }
+
+      .banner-copy h2 {
+        color: #fff;
+      }
+
+      .banner-copy p {
+        color: rgba(255, 255, 255, 0.72);
+        max-width: 500px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .stat {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 22px;
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 2rem;
+        letter-spacing: -0.05em;
+      }
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .fake-photo {
+        min-height: 210px;
+        border-radius: 28px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(228, 107, 46, 0.86),
+            rgba(255, 190, 117, 0.78)
+          ),
+          repeating-linear-gradient(
+            45deg,
+            transparent 0 10px,
+            rgba(255, 255, 255, 0.12) 10px 20px
+          );
+        display: grid;
+        place-items: center;
+        font-size: 4.4rem;
+      }
+
+      .fake-photo:nth-child(2) {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.88),
+            rgba(243, 230, 209, 0.85)
+          ),
+          repeating-linear-gradient(
+            -45deg,
+            transparent 0 10px,
+            rgba(35, 60, 44, 0.09) 10px 20px
+          );
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .process-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 26px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .num {
+        color: rgba(228, 107, 46, 0.25);
+        font-size: 4.2rem;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.08em;
+      }
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .testimonial {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+      }
+
+      .stars {
+        color: var(--brand);
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+      }
+
+      .cta {
+        text-align: center;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 44px;
+        padding: 54px 24px;
+        box-shadow: 0 18px 50px rgba(31, 25, 15, 0.06);
+      }
+
+      .cta p {
+        color: var(--muted);
+        max-width: 580px;
+        margin: 16px auto 28px;
+      }
+
+      footer {
+        padding: 34px 0 50px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+        .hero,
+        .banner {
+          grid-template-columns: 1fr;
+        }
+        .hero-card {
+          min-height: 420px;
+        }
+        .services {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .section-head {
+          align-items: start;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .container {
+          width: min(100% - 28px, 1140px);
+        }
+        header {
+          padding: 16px 0;
+        }
+        .nav {
+          border-radius: 24px;
+          padding: 10px 12px;
+          gap: 12px;
+        }
+        .logo {
+          font-size: 0.98rem;
+        }
+        .logo-mark {
+          width: 36px;
+          height: 36px;
+          border-radius: 12px;
+        }
+        .nav .btn {
+          display: none;
+        }
+        .hero {
+          padding: 32px 0 36px;
+          gap: 30px;
+        }
+        h1 {
+          font-size: clamp(2.45rem, 13vw, 3.2rem);
+          line-height: 0.96;
+          letter-spacing: -0.055em;
+        }
+        h2 {
+          font-size: clamp(2rem, 10vw, 2.75rem);
+          line-height: 1;
+          letter-spacing: -0.055em;
+        }
+        .hero p,
+        .section-head p,
+        .banner-copy p,
+        .cta p {
+          font-size: 1rem;
+        }
+        .hero-actions {
+          flex-direction: column;
+        }
+        .trust-row {
+          gap: 12px;
+          margin-top: 24px;
+        }
+        .btn {
+          width: 100%;
+          padding-inline: 18px;
+        }
+        .services,
+        .process,
+        .testimonials,
+        .stats,
+        .photo-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-card,
+        .step,
+        .testimonial,
+        .banner,
+        .cta {
+          border-radius: 28px;
+          padding: 24px;
+        }
+        .job-card,
+        .rating-card {
+          position: relative;
+          inset: auto;
+          width: auto;
+          margin-top: 12px;
+        }
+        .tool-illustration {
+          inset: 54px 18px auto;
+          font-size: 5.8rem;
+        }
+        .hero-card {
+          min-height: 0;
+          padding: 206px 18px 18px;
+          border-radius: 34px;
+        }
+        .hero-card::before {
+          inset: 12px;
+          border-radius: 24px;
+        }
+        footer {
+          padding-bottom: 34px;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .container {
+          width: min(100% - 22px, 1140px);
+        }
+        .nav {
+          padding: 9px 10px;
+        }
+        .logo span:last-child {
+          max-width: 190px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        h1 {
+          font-size: clamp(2.25rem, 12.5vw, 2.85rem);
+        }
+        .eyebrow {
+          font-size: 0.8rem;
+        }
+        .hero-card {
+          padding-top: 190px;
+        }
+        .tool-illustration {
+          font-size: 5.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container nav">
+          <a class="logo" href="#">
+            <span class="logo-mark">⚒</span>
+            <span>Lorem Ipsum</span>
+          </a>
+          <nav aria-label="Lorem ipsum" class="nav-links">
+            <a href="#services">Lorem ipsum</a>
+            <a href="#process">Lorem ipsum</a>
+            <a href="#reviews">Lorem ipsum</a>
+            <a href="#contact">Lorem ipsum</a>
+          </nav>
+          <a class="btn btn-primary" href="#contact">Lorem ipsum</a>
+        </div>
+      </header>
+      <main>
+        <section class="hero container">
+          <div>
+            <span class="eyebrow">Lorem ipsum dolor</span>
+            <h1>Lorem ipsum <span>dolor sit amet.</span></h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              vitae lacus sed augue facilisis fermentum. Praesent commodo, nibh
+              non gravida cursus, justo lorem tincidunt erat, vitae pretium
+              massa neque at arcu.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Lorem ipsum →</a>
+              <a class="btn btn-secondary" href="#services">Lorem ipsum</a>
+            </div>
+            <div class="trust-row">
+              <span>✓ Lorem ipsum</span>
+              <span>✓ Lorem ipsum</span>
+              <span>✓ Lorem ipsum</span>
+            </div>
+          </div>
+          <aside aria-label="Lorem ipsum" class="hero-card">
+            <div class="tool-illustration">🧰</div>
+            <div class="rating-card">
+              <strong>Lorem</strong>
+              <small>Lorem ipsum</small>
+            </div>
+            <div class="job-card">
+              <strong>Lorem</strong>
+              <small>Lorem ipsum</small>
+            </div>
+          </aside>
+        </section>
+        <section class="container" id="services">
+          <div class="section-head">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium. Curabitur non sem vitae massa
+              vulputate aliquet, donec tempor justo nec lorem porta, a posuere
+              massa placerat.
+            </p>
+          </div>
+          <div class="services">
+            <article class="service-card">
+              <div class="icon">🪛</div>
+              <h3>Lorem ipsum</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+            </article>
+            <article class="service-card">
+              <div class="icon">📦</div>
+              <h3>Dolor sit amet</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+            </article>
+            <article class="service-card">
+              <div class="icon">🖼️</div>
+              <h3>Consectetur elit</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+            </article>
+            <article class="service-card">
+              <div class="icon">🧼</div>
+              <h3>Sed do eiusmod</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="container">
+          <div class="banner">
+            <div class="banner-copy">
+              <span class="eyebrow">Lorem ipsum dolor</span>
+              <h2>Consectetur adipiscing elit.</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+              <div class="stats">
+                <div class="stat">
+                  <strong>Lorem</strong><span>Lorem ipsum</span>
+                </div>
+                <div class="stat">
+                  <strong>Lorem</strong><span>Dolor sit</span>
+                </div>
+                <div class="stat">
+                  <strong>Lorem</strong><span>Amet elit</span>
+                </div>
+              </div>
+            </div>
+            <div aria-hidden="true" class="photo-grid">
+              <div class="fake-photo">🔨</div>
+              <div class="fake-photo">🏠</div>
+            </div>
+          </div>
+        </section>
+        <section class="container" id="process">
+          <div class="section-head">
+            <h2>Sed do eiusmod tempor.</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              vitae lacus sed augue facilisis.
+            </p>
+          </div>
+          <div class="process">
+            <article class="process-card">
+              <div class="num">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+              <h3>Ut enim minim</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+            </article>
+            <article class="process-card">
+              <div class="num">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+              <h3>Duis aute dolor</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+            </article>
+            <article class="process-card">
+              <div class="num">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+              <h3>Excepteur sint</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="container" id="reviews">
+          <div class="section-head">
+            <h2>Ut enim ad minim veniam.</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              vitae lacus sed augue facilisis.
+            </p>
+          </div>
+          <div class="testimonials">
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+              <h3>Lorem ipsum</h3>
+            </article>
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                vitae lacus sed augue facilisis.
+              </p>
+              <h3>Dolor sit amet</h3>
+            </article>
+          </div>
+        </section>
+        <section class="container" id="contact">
+          <div class="cta">
+            <span class="eyebrow">Lorem ipsum dolor</span>
+            <h2>Duis aute irure dolor.</h2>
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Nulla facilisi, etiam
+              luctus ipsum sit amet.
+            </p>
+            <a class="btn btn-primary" href="#">Lorem ipsum</a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="container">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
