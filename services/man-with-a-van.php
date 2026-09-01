@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Man With a Van | Suffolk Property Solutions';
-$pageDescription = 'Man with a van services across Suffolk and Norfolk. Furniture collection, house moves, deliveries, collections and tip runs.';
+$pageTitle = 'Man With a Van in Suffolk | Suffolk Property Solutions';
+$pageDescription = 'Man with a van in Suffolk for furniture collections, deliveries, house move support and tip runs. Reliable local transport service. Get your free quote.';
 
 include dirname(__DIR__) . '/includes/header.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-const RESEND_API_KEY    = 're_Hmz2MHid_L345icjkhieartVXUg5PchfV';
+const RESEND_API_KEY = 'check hosting provider';
 const CONTACT_FROM_EMAIL = 'Suffolk Property Solutions Website <noreply@emails.signalpoint.co.uk>';
 const CONTACT_TO_EMAIL   = 'enquiries@signalpoint.co.uk';
 
@@ -115,8 +115,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // GET — show the contact page
 $year = (int) date('Y');
-$pageTitle = 'Contact | Suffolk Property Solutions';
-$pageDescription = 'Get in touch with Suffolk Property Solutions for a free, no-obligation quote. Handyman and property maintenance services across Suffolk and Norfolk.';
+$pageTitle = 'Contact Suffolk Property Solutions | Free Quotes Suffolk';
+$pageDescription = 'Contact Suffolk Property Solutions for handyman and property maintenance in Suffolk. Fast replies, clear pricing and free, no-obligation quotes. Enquire today.';
 
 include 'includes/header.php';
 ?>
@@ -151,8 +151,8 @@ include 'includes/header.php';
             </label>
 
             <label>
-              Phone Number <span style="font-weight:400;color:var(--muted)">(optional)</span>
-              <input type="tel" name="phone" placeholder="01234 567 890" />
+              Phone Number</span>
+              <input type="tel" name="phone" placeholder="01234 567 890" required />
             </label>
 
             <label>

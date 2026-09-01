@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-$pageTitle = $pageTitle ?? 'Suffolk Property Solutions | Handyman & Property Maintenance Suffolk & Norfolk';
-$pageDescription = $pageDescription ?? 'Reliable handyman and property maintenance services across Suffolk and Norfolk. Fully insured, experienced and local.';
+$pageTitle = $pageTitle ?? 'Handyman Services in Suffolk | Suffolk Property Solutions';
+$pageDescription = $pageDescription ?? 'Reliable handyman and property maintenance in Suffolk for homes and landlords. Fully insured local service with clear quotes and trusted workmanship.';
 $year = $year ?? (int) date('Y');
 ?>
 <!doctype html>
@@ -21,7 +21,7 @@ $year = $year ?? (int) date('Y');
         <div class="container">
           <div class="nav">
             <a class="logo" href="/">
-              <span class="logo-mark">🛠️</span>
+              <img class="logo-img" src="/assets/images/suffolkpropertysolutionslogo.png" alt="Suffolk Property Solutions logo" />
               <span>Suffolk Property Solutions</span>
             </a>
 

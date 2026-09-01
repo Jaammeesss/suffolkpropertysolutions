@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'About | Suffolk Property Solutions';
-$pageDescription = 'About Suffolk Property Solutions. A reliable handyman and property maintenance service for homeowners and landlords across Suffolk and Norfolk.';
+$pageTitle = 'About Suffolk Property Solutions | Local Handyman Suffolk';
+$pageDescription = 'Learn about Suffolk Property Solutions, your local handyman in Suffolk. Construction-backed workmanship, reliable service and honest advice. Get in touch today.';
 
 include 'includes/header.php';
 ?>

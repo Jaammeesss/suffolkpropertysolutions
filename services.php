@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Services | Suffolk Property Solutions';
-$pageDescription = 'Handyman and property maintenance services across Suffolk and Norfolk. General repairs, home improvements, fencing, man with a van and landlord maintenance.';
+$pageTitle = 'Handyman Services in Suffolk | Suffolk Property Solutions';
+$pageDescription = 'Handyman services in Suffolk for repairs, property maintenance, fencing, wall repairs and more. Serving homes and landlords. Request your free quote today.';
 
 include 'includes/header.php';
 ?>
@@ -32,7 +32,7 @@ include 'includes/header.php';
             <a class="service-link" href="/services/property-maintenance">View service &rarr;</a>
           </article>
           <article class="service-full-card">
-            <div class="icon">&#128292;</div>
+            <div class="icon">&#129521;</div>
             <h3>Wall Repairs</h3>
             <p>Plasterboard repairs, filling, skimming and making good. Professional wall repairs leaving a clean, ready-to-decorate finish.</p>
             <a class="service-link" href="/services/wall-repairs">View service &rarr;</a>
@@ -61,6 +61,31 @@ include 'includes/header.php';
             <p>Reliable maintenance support for landlords. Property repairs between tenants, damage repairs, furniture assembly and general upkeep.</p>
             <a class="service-link" href="/services/landlord-maintenance">View service &rarr;</a>
           </article>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="section-head" style="margin-bottom:22px">
+          <h2>General FAQs</h2>
+          <p>Helpful answers about our handyman and property maintenance services across Suffolk and Norfolk.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>What services does Suffolk Property Solutions offer?</summary>
+            <p>I offer handyman and property maintenance services including home repairs, wall repairs, fencing, home improvements, landlord maintenance and man with a van support.</p>
+          </details>
+          <details>
+            <summary>Which areas of Suffolk do you cover?</summary>
+            <p>I cover areas across Suffolk and nearby parts of Norfolk. If you are outside these areas, please contact me and I can confirm whether I can help.</p>
+          </details>
+          <details>
+            <summary>Why choose Suffolk Property Solutions?</summary>
+            <p>You get a reliable, fully insured local service with a practical construction background, clear communication and high standards on every job.</p>
+          </details>
+          <details>
+            <summary>What is the cost?</summary>
+            <p>Pricing depends on the type and size of the work. I provide free, no-obligation quotes with clear costs before any work begins.</p>
+          </details>
         </div>
       </section>
 

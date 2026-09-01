@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Landlord Maintenance | Suffolk Property Solutions';
-$pageDescription = 'Reliable property maintenance support for landlords across Suffolk and Norfolk. Repairs between tenants, damage repairs, furniture assembly and general upkeep.';
+$pageTitle = 'Landlord Maintenance Suffolk | Suffolk Property Solutions';
+$pageDescription = 'Landlord maintenance in Suffolk for repairs between tenancies, damage fixes and ongoing upkeep. Reliable local support for rental properties. Get a free quote.';
 
 include dirname(__DIR__) . '/includes/header.php';
 ?>

@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Handyman Services | Suffolk Property Solutions';
-$pageDescription = 'General handyman services across Suffolk and Norfolk. Shelving, furniture assembly, door repairs, picture hanging and general household maintenance.';
+$pageTitle = 'Handyman Services in Suffolk | Suffolk Property Solutions';
+$pageDescription = 'Professional handyman services in Suffolk for shelving, furniture assembly, fittings and home repairs. Reliable, fully insured help. Get your free quote today.';
 
 include dirname(__DIR__) . '/includes/header.php';
 ?>

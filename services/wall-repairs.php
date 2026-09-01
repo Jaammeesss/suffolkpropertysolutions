@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Wall Repairs | Suffolk Property Solutions';
-$pageDescription = 'Professional wall repairs across Suffolk and Norfolk. Plasterboard patching, filling, skimming and making good. Ready-to-decorate finishes.';
+$pageTitle = 'Wall Repairs in Suffolk | Suffolk Property Solutions';
+$pageDescription = 'Professional wall repairs in Suffolk including plasterboard patching, crack repairs and making good. Clean, ready-to-decorate finishes. Get your free quote.';
 
 include dirname(__DIR__) . '/includes/header.php';
 ?>
@@ -32,7 +32,6 @@ include dirname(__DIR__) . '/includes/header.php';
               <li>Plasterboard patching and repairs</li>
               <li>Hole filling and making good</li>
               <li>Crack repairs</li>
-              <li>Skim coat finishing</li>
               <li>Damage repair after fixture removal</li>
               <li>Preparation for decorating</li>
               <li>Textured surface matching</li>

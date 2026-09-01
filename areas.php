@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Areas Covered | Suffolk Property Solutions';
-$pageDescription = 'Suffolk Property Solutions covers Suffolk and Norfolk for all handyman and property maintenance services. Find out if we cover your area.';
+$pageTitle = 'Areas We Cover in Suffolk | Suffolk Property Solutions';
+$pageDescription = 'See areas covered across Suffolk and nearby Norfolk for handyman and property maintenance services. Check availability and request your free quote today.';
 
 include 'includes/header.php';
 ?>

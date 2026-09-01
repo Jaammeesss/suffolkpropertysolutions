@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Home Improvements | Suffolk Property Solutions';
-$pageDescription = 'Home improvement services across Suffolk and Norfolk. Decorating, flooring repairs, internal carpentry and small renovation projects.';
+$pageTitle = 'Home Improvements in Suffolk | Suffolk Property Solutions';
+$pageDescription = 'Home improvements in Suffolk including decorating prep, carpentry, flooring repairs and small renovations. Improve your property with a free quote today.';
 
 include dirname(__DIR__) . '/includes/header.php';
 ?>

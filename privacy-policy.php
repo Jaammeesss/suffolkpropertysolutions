@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Privacy Policy | Suffolk Property Solutions';
-$pageDescription = 'Privacy policy for Suffolk Property Solutions. How we collect, use and protect your personal information.';
+$pageTitle = 'Privacy Policy UK GDPR | Suffolk Property Solutions';
+$pageDescription = 'Read how Suffolk Property Solutions collects, uses and protects your personal data when you contact us or use this website, in line with UK GDPR rules.';
 
 include 'includes/header.php';
 ?>
@@ -24,6 +24,8 @@ include 'includes/header.php';
         <p>
           Suffolk Property Solutions<br>
           Suffolk, United Kingdom
+          <br>
+          Email: <a href="mailto:data@suffolkpropertysolutions.co.uk">data@suffolkpropertysolutions.co.uk</a>
         </p>
 
         <h2>Information We Collect</h2>
@@ -96,7 +98,6 @@ include 'includes/header.php';
           <li>Request transfer of your data where applicable</li>
           <li>Withdraw consent where consent has been relied upon</li>
         </ul>
-        <p>To exercise these rights, please contact us via the <a href="/contact">contact form</a>.</p>
 
         <h2>Security</h2>
         <p>We take appropriate technical and organisational measures to protect personal information from unauthorised access, disclosure, alteration or destruction. However, no internet transmission can be guaranteed to be completely secure.</p>
@@ -108,7 +109,13 @@ include 'includes/header.php';
         <p>We may update this Privacy Policy from time to time. Any changes will be published on this page with an updated revision date.</p>
 
         <h2>Contact</h2>
-        <p>If you have any questions about this Privacy Policy or how your personal information is handled, please <a href="/contact">contact us</a>.</p>
+        <p>If you have any questions about this Privacy Policy or how your personal information is handled, please contact:</p>
+        <p>
+          Suffolk Property Solutions<br>
+          Suffolk, United Kingdom
+          <br>
+          Email: <a href="mailto:data@suffolkpropertysolutions.co.uk">data@suffolkpropertysolutions.co.uk</a>
+        </p>
         <p>If you remain dissatisfied, you have the right to lodge a complaint with the Information Commissioner&rsquo;s Office (ICO):</p>
         <p><a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">https://ico.org.uk</a></p>
       </div>

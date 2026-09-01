@@ -4,7 +4,7 @@
         <div class="footer-top">
           <div class="footer-brand">
             <a class="logo" href="/">
-              <span class="logo-mark">🛠️</span>
+              <img class="logo-img" src="/assets/images/suffolkpropertysolutionslogo.png" alt="Suffolk Property Solutions logo" />
               <span>Suffolk Property Solutions</span>
             </a>
             <p>Reliable handyman &amp; property maintenance services across Suffolk and Norfolk.</p>

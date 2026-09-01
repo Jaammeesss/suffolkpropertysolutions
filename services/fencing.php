@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 $year = (int) date('Y');
-$pageTitle = 'Fencing & Outdoor Maintenance | Suffolk Property Solutions';
-$pageDescription = 'Fencing repairs, new fencing, gate repairs, shed assembly and outdoor maintenance across Suffolk and Norfolk.';
+$pageTitle = 'Fencing Repairs in Suffolk | Suffolk Property Solutions';
+$pageDescription = 'Fencing repairs and outdoor maintenance in Suffolk, including new fence panels, posts, gates and shed assembly. Durable workmanship. Request a free quote.';
 
 include dirname(__DIR__) . '/includes/header.php';
 ?>
