@@ -8,7 +8,7 @@ $pageDescription = 'Fencing repairs and outdoor maintenance in Suffolk, includin
 include dirname(__DIR__) . '/includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="breadcrumb"><a href="/services">Services</a> <span>/</span> Fencing &amp; Outdoor</div>
         <div class="page-hero">

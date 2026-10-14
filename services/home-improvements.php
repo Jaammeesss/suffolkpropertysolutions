@@ -8,7 +8,7 @@ $pageDescription = 'Home improvements in Suffolk including decorating prep, carp
 include dirname(__DIR__) . '/includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="breadcrumb"><a href="/services">Services</a> <span>/</span> Home Improvements</div>
         <div class="page-hero">

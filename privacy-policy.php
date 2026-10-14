@@ -8,7 +8,7 @@ $pageDescription = 'Read how Suffolk Property Solutions collects, uses and prote
 include 'includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <div class="privacy-container container">
         <h1>Privacy Policy</h1>
         <p class="last-updated">Last Updated: 19 July 2026</p>

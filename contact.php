@@ -121,7 +121,7 @@ $pageDescription = 'Contact Suffolk Property Solutions for handyman and property
 include 'includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="page-hero">
           <span class="eyebrow">Free, no-obligation quotes</span>

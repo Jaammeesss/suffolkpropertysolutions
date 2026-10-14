@@ -8,7 +8,7 @@ $pageDescription = 'See areas covered across Suffolk and nearby Norfolk for hand
 include 'includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="page-hero">
           <span class="eyebrow">Where we work</span>

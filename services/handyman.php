@@ -8,7 +8,7 @@ $pageDescription = 'Professional handyman services in Suffolk for shelving, furn
 include dirname(__DIR__) . '/includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="breadcrumb"><a href="/services">Services</a> <span>/</span> Handyman Services</div>
         <div class="page-hero">

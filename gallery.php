@@ -8,7 +8,7 @@ $pageDescription = 'Browse handyman and property maintenance work in Suffolk, fr
 include 'includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="page-hero">
           <span class="eyebrow">Our work</span>

@@ -8,7 +8,7 @@ $pageDescription = 'Man with a van in Suffolk for furniture collections, deliver
 include dirname(__DIR__) . '/includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="breadcrumb"><a href="/services">Services</a> <span>/</span> Man With a Van</div>
         <div class="page-hero">

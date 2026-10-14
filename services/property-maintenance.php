@@ -8,7 +8,7 @@ $pageDescription = 'Professional property maintenance in Suffolk for homes, land
 include dirname(__DIR__) . '/includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="breadcrumb"><a href="/services">Services</a> <span>/</span> Property Maintenance</div>
         <div class="page-hero">

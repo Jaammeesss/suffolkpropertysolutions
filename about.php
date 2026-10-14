@@ -8,7 +8,7 @@ $pageDescription = 'Learn about Suffolk Property Solutions, your local handyman 
 include 'includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
       <section class="container">
         <div class="page-hero">
           <span class="eyebrow">About us</span>

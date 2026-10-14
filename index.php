@@ -5,10 +5,25 @@ $year = (int) date('Y');
 $pageTitle = 'Handyman Services Suffolk | Suffolk Property Solutions';
 $pageDescription = 'Reliable handyman in Suffolk for repairs, maintenance and home improvements. Fully insured local service for homes and landlords. Request a free quote today.';
 
+$faqs = [
+    ['Do you cover my area in Suffolk?', 'Yes. Suffolk Property Solutions covers all of Suffolk including Ipswich, Bury St Edmunds, Stowmarket, Newmarket, Sudbury, Woodbridge, Felixstowe and Lowestoft, plus Norwich and the rest of Norfolk.'],
+    ['Are you fully insured?', 'Yes. Every job is covered by appropriate insurance, so your home and property are protected.'],
+    ['Is the quote free?', 'Yes. Quotes are free and without obligation. Send a description or a list of jobs and you will get a prompt, clear price.'],
+    ['Do you work for landlords and letting agents?', 'Yes. Landlord maintenance includes repairs between tenancies, damage repairs, furniture assembly and ongoing upkeep.'],
+    ['What size of job do you take on?', 'Everything from a single shelf or curtain pole to larger repair and improvement projects. If a job needs a specialist trade, you will be told honestly.'],
+];
+$extraSchema = [[
+    '@type' => 'FAQPage',
+    'mainEntity' => array_map(
+        fn (array $f): array => ['@type' => 'Question', 'name' => $f[0], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f[1]]],
+        $faqs
+    ),
+]];
+
 include 'includes/header.php';
 ?>
 
-    <main>
+    <main id="main">
 
       <!-- HERO -->
       <section class="hero container">
@@ -219,6 +234,22 @@ include 'includes/header.php';
             <h3>Jo</h3>
             <small>Ipswich &middot; 6 Oct 2026</small>
           </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="container faq-section" id="faq">
+        <div class="section-head">
+          <h2>Handyman FAQs for Suffolk &amp; Norfolk.</h2>
+          <p>Quick answers to the questions customers ask most.</p>
+        </div>
+        <div class="faq-list">
+<?php foreach ($faqs as $f): ?>
+          <details>
+            <summary><?= htmlspecialchars($f[0]) ?></summary>
+            <p><?= htmlspecialchars($f[1]) ?></p>
+          </details>
+<?php endforeach; ?>
         </div>
       </section>
 
