@@ -39,6 +39,20 @@ include 'includes/header.php';
         </aside>
       </section>
 
+      <section class="container mybuilder-verification-section">
+        <div class="mybuilder-verification">
+          <div class="mybuilder-verification-copy">
+            <span aria-hidden="true" class="mybuilder-verification-mark">&#10003;</span>
+            <div>
+              <span class="eyebrow">Verified Trade</span>
+              <h2>Verified by MyBuilder</h2>
+              <p>Explore our profile, portfolio, and customer feedback on MyBuilder.</p>
+            </div>
+          </div>
+          <a class="btn btn-secondary" href="https://www.mybuilder.com/profile/suffolk-property-solutions" target="_blank" rel="noopener noreferrer">View MyBuilder Profile &rarr;</a>
+        </div>
+      </section>
+
       <!-- INTRO -->
       <section class="container">
         <div class="section-head">
@@ -190,19 +204,20 @@ include 'includes/header.php';
       <section class="container" id="reviews">
         <div class="section-head">
           <h2>What Customers Say.</h2>
+          <a class="btn btn-secondary" href="https://www.mybuilder.com/profile/suffolk-property-solutions" target="_blank" rel="noopener noreferrer">Explore our MyBuilder profile</a>
         </div>
         <div class="testimonials">
           <article class="testimonial">
             <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>Really pleased with the work done. Turned up on time, got the job done efficiently and left everything tidy. Would definitely use again and would recommend to anyone needing reliable maintenance work.</p>
-            <h3>Sarah T.</h3>
-            <small>Ipswich, Suffolk</small>
+            <p><strong>Additional stair rail</strong><br />Highly Recommended Jake came and installed a stair rail for us today, and we couldn&rsquo;t be happier with the service. My husband has injured his right arm and urgently needed a handrail on the other side of our staircase for support. Jake responded very quickly and completed the work the same day. He was professional, friendly, and reliable throughout. Nothing was too much trouble, and he even purchased the handrail for us, making the whole process completely stress-free. The workmanship is excellent, and everything was fitted neatly and securely. Jake is trustworthy, courteous, and takes great pride in his work. I would highly recommend him to anyone looking for a skilled and dependable tradesperson. Thank you, Jake, for such a prompt and professional service.</p>
+            <h3>Susan</h3>
+            <small>Ipswich &middot; 14 Oct 2026</small>
           </article>
           <article class="testimonial">
             <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>We had a list of jobs that had been building up for months. All completed in one visit to a great standard. Friendly, professional and honest about what was needed. Highly recommend.</p>
-            <h3>Mark R.</h3>
-            <small>Bury St Edmunds, Suffolk</small>
+            <p><strong>Assemble furniture and fit curtain pole</strong><br />Job completed successfully, Very happy with the finished job. Jake very professional and polite. Phenomenal workmanship couldn&rsquo;t ask for anyone better, will definitely hire Suffolk Property Solutions again.</p>
+            <h3>Jo</h3>
+            <small>Ipswich &middot; 6 Oct 2026</small>
           </article>
         </div>
       </section>
